@@ -21,6 +21,93 @@ The project has been generated using the Yeoman generator, for more on this plea
 - Additional modules can be added by the instructions present [here](https://github.com/cgross/generator-cg-angular)
 - Any element that is used on all screens are to be designed as directives (Refer sample directives under the common & feed modules)
 
+### Directory Layout
+All subgenerators prompt the user to specify where to save the new files.  Thus you can create any directory structure you desire, including nesting.  The generator will create a handful of files in the root of your project including `index.html`, `app.js`, and `app.less`.  You determine how the rest of the project will be structured.
+
+In this example, the user has chosen to group the app into an `admin` folder, a `search` folder, and a `service` folder.
+
+
+    app.less ....................... main app-wide styles
+    app.js ......................... angular module initialization and route setup
+    index.html ..................... main HTML file
+    Gruntfile.js ................... Grunt build file
+    /admin ......................... example admin module folder
+      admin.js ..................... admin module initialization and route setup
+      admin.less ................... admin module LESS
+      /admin-directive1 ............ angular directives folder
+        admin-directive1.js ........ example simple directive
+        admin-directive1-spec.js.... example simple directive unit test
+      /admin-directive2 ............ example complex directive (contains external partial)
+        admin-directive2.js ........ complex directive javascript
+        admin-directive2.html ...... complex directive partial
+        admin-directive2.less ...... complex directive LESS
+        admin-directive2-spec.js ... complex directive unit test
+      /admin-partial ............... example partial
+        admin-partial.html ......... example partial html
+        admin-partial.js ........... example partial controller
+        admin-partial.less ......... example partial LESS
+        admin-partial-spec.js ...... example partial unit test
+    /search ........................ example search component folder
+      my-filter.js ................. example filter
+      my-filter-spec.js ............ example filter unit test
+      /search-partial .............. example partial
+        search-partial.html ........ example partial html
+        search-partial.js .......... example partial controller
+        search-partial.less ........ example partial LESS
+        search-partial-spec.js ..... example partial unit test
+    /service ....................... angular services folder
+        my-service.js .............. example service
+        my-service-spec.js ......... example service unit test
+        my-service2.js ............. example service
+        my-service2-spec.js ........ example service unit test
+    /img ........................... images (not created by default but included in /dist if added)
+    /dist .......................... distributable version of app built using grunt and Gruntfile.js
+    /bower_component................ 3rd party libraries managed by bower
+    /node_modules .................. npm managed libraries used by grunt
+
+Grunt Tasks
+-------------
+
+Now that the project is created, you have 3 simple Grunt commands available:
+
+    grunt serve   #This will run a development server with watch & livereload enabled.
+    grunt test    #Run local unit tests.
+    grunt build   #Places a fully optimized (minified, concatenated, and more) in /dist
+
+When `grunt serve` is running, any changed javascript files will be linted using JSHint as well as have their appropriate unit tests executed.  Only the unit tests that correspond to the changed file will be run.  This allows for an efficient test driven workflow.
+
+Yeoman Subgenerators
+-------------
+
+There are a set of subgenerators to initialize empty Angular components.  Each of these generators will:
+
+* Create one or more skeleton files (javascript, LESS, html, spec etc) for the component type.
+* Update index.html and add the necessary `script` tags.
+* Update app.less and add the @import as needed.
+* For partials, update the app.js, adding the necessary route call if a route was entered in the generator prompts.
+
+There are generators for `directive`,`partial`,`service`, `filter`, `module`, and `modal`.
+
+Running a generator:
+
+    yo cg-angular:directive my-awesome-directive
+    yo cg-angular:partial my-partial
+    yo cg-angular:service my-service
+    yo cg-angular:filter my-filter
+    yo cg-angular:module my-module
+    yo cg-angular:modal my-modal
+
+The name paramater passed (i.e. 'my-awesome-directive') will be used as the file names.  The generators will derive appropriate class names from this parameter (ex. 'my-awesome-directive' will convert to a class name of 'MyAwesomeDirective').  Each sub-generator will ask for the folder in which to create the new skeleton files.  You may override the default folder for each sub-generator in the `.yo-rc.json` file.
+
+The modal subgenerator is a convenient shortcut to create partials that work as modals for Bootstrap v3 and Angular-UI-Bootstrap v1.3 (both come preconfigured with this generator).  If you choose not to use either of these libraries, simply don't use the modal subgenerator.
+
+Subgenerators are also customizable.  Please read [CUSTOMIZING.md](CUSTOMIZING.md) for details.
+
+Submodules
+-------------
+
+Submodules allow you to more explicitly separate parts of your application.  Use the `yo cg-angular:module my-module` command and specify a new subdirectory to place the module into.  Once you've created a submodule, running other subgenerators will now prompt you to select the module in which to place the new component.
+
 ## Dynamic Right Panel Rendering
 The signed in section has a right panel, depending on the page / route that is being rendered, this is called using an angular event, emitted with the following code: `$scope.$emit('render-right-panel', { page: 'feed' });` . The event name must remain the same, the page section can differ based on which route is currently active. If the developer chooses not to render the right panel at all, use `null` in the page argument, or do not call this function at all.
 
@@ -35,4 +122,7 @@ However, the form shall be rendered differently for forms that are spawned from 
 
 
 ## Contributing
-All contributors must make use of standard angular conventions of directives, modals etc. to keep the code reusable, and programmable. Only in the rare event of creating 
+All contributors must make use of standard angular conventions of directives, modals etc. to keep the code reusable, and programmable. This project follows the [Angular Best Practice Guidelines for Project Structure.](https://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html?_escaped_fragment_=)
+
+## Upgrading
+The contributors may upgrade to the newer form of coding using the ng best practices by visiting [this](https://github.com/cgross/generator-cg-angular15) 
