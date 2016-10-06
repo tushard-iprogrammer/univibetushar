@@ -1,0 +1,38 @@
+.popover.bottom {
+	color:@gray-darker;
+	margin-top: -10px;
+	width:400px;
+    .popover-title {
+        color: @gray-darker;
+    }
+    .scroller-popover{
+    	overflow-y: scroll;
+    	height:400px;
+    	padding-bottom: 48px;
+    }
+    .media{
+    	border-bottom:1px solid @gray-lighter;
+    	padding:10px 0;
+    	&:last-child{
+    		border-bottom-color: transparent;
+    	}
+    }
+    .popover-block{
+    	position:absolute;
+    	background: white;
+    	margin-left:-15px;
+    	border-left: none;
+    	border-right: none;
+    	bottom:0;
+    	height:48px;
+    	width:100%;
+    	i{
+    		display: inline;
+    		color:@gray-darker!important;
+    	}
+    }
+    i{
+    	color:@gray-darker!important;
+    	font-size: 19px;
+    }
+}

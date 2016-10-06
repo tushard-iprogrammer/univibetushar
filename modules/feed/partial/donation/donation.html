@@ -1,0 +1,75 @@
+<div class="col-md-12 main-panel">
+    <div class="panel panel-default abbas-post-detail">
+        <div class="panel-heading">
+            <button type="button" class="btn btn-primary pull-right">
+                Rs. 100 min.
+            </button>
+            <h3>Hello, world!<br><small>Whatever subtitle line is here</small></h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" ng-style="{'width':post.completion}">
+                    <span>{{(post.paid / post.total )* 100}}% Complete</span>
+                </div>
+            </div>
+            <ul class="list-inline">
+                <li><a class="btn btn-transparent btn-xs" ng-click="openModal('view')"><i class="material-icons">monetization_on</i> {{paidPeople.length}} Contributions</a></li>
+                <li><a class="btn btn-transparent btn-xs" ng-click="openModal('view')"><i class="material-icons">check_circle</i> {{post.paid || 0}} Collected / {{post.total}} Total</a></li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <ul class="list-inline pull-right">
+                <li><a class="btn btn-default btn-sm"><i class="material-icons">file_download</i> Download List</a></li>
+            </ul>
+            <div class="media abbas-profile-details">
+                <div class="media-left media-top">
+                    <a href="#">
+                        <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">{{user.first_name}} {{user.last_name}}</h5>
+                    <small>{{post.posted_time | amCalendar:referenceTime:formats}}<br>
+                          <span class="text-muted text-capitalize" ng-show="(post.type || post.subtype) && post.type !== 'status'">Posted in <a href="#">{{post.subtype || post.type}}</a></span>
+                    </small>
+                </div>
+            </div>
+            <hr>
+            <p>{{post.content}}</p>
+        </div>
+        <!--<div class="list-group">
+            <div class="list-group-item abbas-like-bar" ng-show="post.comments.length || post.likes">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="btn btn-transparent"><i class="material-icons">favorite_border</i></a> {{post.likes}}
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-transparent"><i class="material-icons">chat_bubble_outline</i></a> {{post.comments.length}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <textarea placeholder="Write your comment and press enter" msd-elastic class="form-control" ng-model="newComment"></textarea>
+        </div>-->
+    </div>
+    <!--<h5><i class="material-icons">chat_bubble_outline</i> Comments</h5>
+    <div class="list-group" ng-show="post.comments.length">
+        <div class="list-group-item" ng-repeat="comment in post.comments">
+            <div class="media">
+                <div class="media-left media-top">
+                    <a href="#">
+                        <img class="media-object" src="http://placehold.it/36/f5f5f5/000?text=36px">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <ul class="list-inline pull-right comment-list">
+                        <li><a class="btn btn-transparent"><i class="material-icons">mode_edit</i></a></li>
+                        <li><a class="btn btn-transparent"><i class="material-icons">delete</i></a></li>
+                        <li><a class="btn btn-transparent" uib-tooltip="Report Abuse" tooltip-placement="top"><i class="material-icons">flag</i></a></li>
+                    </ul>
+                    <h5 class="media-heading">{{comment.name}} <small>{{comment.time | amCalendar:referenceTime:formats}}</small></h5>
+                    <p>{{comment.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>

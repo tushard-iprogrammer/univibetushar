@@ -1,0 +1,15 @@
+<div ng-controller="NotificationpopoverCtrl" class="scroller-popover">
+    <div class="media abbas-profile-details" ng-repeat="n in notifications">
+        <div class="media-left media-top">
+            <a href="#">
+                <img class="media-object" ng-src="{{n.profile_picture}}" alt="user.id">
+            </a>
+        </div>
+        <div class="media-body">
+            <small class="text-muted pull-right">{{n.time}}</small>
+            <h5 class="media-heading">{{n.first_name}} {{n.last_name}}</h5>
+            <p>{{n.description}}</p>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-block popover-block" ui-sref="base.notificationsList">See All <i class="material-icons">chevron_right</i></button>
+</div>

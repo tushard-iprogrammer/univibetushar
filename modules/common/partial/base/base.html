@@ -1,0 +1,108 @@
+<div class="abbas-wrapper">
+    <fixed-nav></fixed-nav>
+    <nav class="navbar navbar-default abbas-custom-nav custom-fixed" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs col-md-3">
+                    <div class="input-group search">
+                        <span class="input-group-addon" id="basic-addon1">
+                            <i class="material-icons">search</i>
+                        </span>
+                        <input type="search" id="search" class="form-control" placeholder="Search" required="required" ng-model="searchText">
+                    </div>
+                </div>
+                <div class="hidden-xs col-md-5">
+                    <ul class="list-inline">
+                        <li>
+                            <a ui-sref="base.feed">Home</a>
+                        </li>
+                        <li>
+                            <a ui-sref="base.list">Network</a>
+                        </li>
+                        <li>
+                            <a href="#">Groups</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-7 hidden-xs">
+                    <ul class="list-inline icon-list">
+                        <li>
+                            <a class="btn btn-transparent" uib-popover-template="'inviteTemplate.html'" popover-title="Invite Friends" popover-placement="bottom" popover-trigger="outsideClick">
+                                <i class="material-icons">person_add</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent" ui-sref="inbox">
+                                <span class="abbas-notification-count">200</span>
+                                <i class="material-icons">inbox</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent" uib-popover-template="'modules/common/partial/notificationPopover/notificationPopover.html'" popover-title="Notifications" popover-placement="bottom" popover-trigger="outsideClick">
+                                <span class="abbas-notification-count">1</span>
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-7 visible-xs">
+                    <ul class="list-inline icon-list">
+                        <li>
+                            <a class="btn btn-transparent" ng-click="openNav()">
+                                <i class="material-icons">menu</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <i class="material-icons">person_add</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <span class="abbas-notification-count">200</span>
+                                <i class="material-icons">inbox</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent" ui-sref="base.notificationsList">
+                                <span class="abbas-notification-count">1</span>
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-5 text-right">
+                    <div class="abbas-profile-picture-frame pull-right">
+                        <img src="https://robohash.org/ankitporwal.jpg?size=40x40&set=set1" alt="profile-picture" ui-sref="base.profile"> <span class="hidden-xs">Ankit</span>
+                        <a href="#"><i class="material-icons pull-right">more_vert</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="abbas-content-wrapper">
+        <div class="container container-main">
+            <div class="row">
+                <div class="col-xs-12" ng-class="{'col-md-7': page, 'col-md-12':!page}">
+                    <div ui-view></div>
+                </div>
+                <div class="col-md-4 col-xs-0 hidden-xs">
+                    <right-panel page="page" ng-show="page" type="type"></right-panel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="inviteTemplate.html">
+    <div>
+        <p>Help us make this network bigger, and reeling with relevant information by inviting your friends. </p>
+        <input type="text" class="form-control" placeholder="Search for...">
+        <button type="button" class="btn btn-large btn-block btn-default" style="width:100%">Send Invite</button>
+        <!-- /input-group -->
+    </div>
+</script>

@@ -1,0 +1,12 @@
+<div class="col-md-12 col-xs-12">
+<editor></editor>
+    <div class="panel panel-default">
+        <uib-tabset active="0">
+            <uib-tab heading="All Posts" index="0"></uib-tab>
+            <uib-tab heading="Opportunities" index="1"></uib-tab>
+            <uib-tab heading="Blogs" index="2"></uib-tab>
+            <uib-tab heading="Photos" index="3"></uib-tab>
+        </uib-tabset>
+    </div>
+    <post ng-repeat="item in feedItems" post="item.post" user="item.user"></post>
+</div>

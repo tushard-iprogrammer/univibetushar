@@ -1,0 +1,126 @@
+<div>
+    <div class="panel panel-default editor-panel">
+        <div class="panel-heading input-getter">
+            <!-- Split button -->
+            <uib-tabset active="activePill" type="pills">
+                <uib-tab index="0" select="changeType('status')">
+                    <uib-tab-heading class="pill-header">
+                        <i class="material-icons">mode_edit</i> Status
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="1" select="changeType('opportunity')">
+                    <uib-tab-heading>
+                        <i class="material-icons">work</i> Opportunity
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="2" select="changeType('blogs')">
+                    <uib-tab-heading>
+                        <i class="material-icons">format_align_left</i> Blogs
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="3" select="changeType('photo')">
+                    <uib-tab-heading>
+                        <i class="material-icons">insert_photo</i> Photo / Video
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="4" select="changeType('event')">
+                    <uib-tab-heading>
+                        <i class="material-icons">today</i> Event
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="5" select="changeType('donation')">
+                    <uib-tab-heading>
+                        <i class="material-icons">account_balance_wallet</i> Campaign
+                    </uib-tab-heading>
+                </uib-tab>
+                <uib-tab index="6" select="changeType('newsletter')">
+                    <uib-tab-heading>
+                        <i class="material-icons">chrome_reader_mode</i> Newsletter
+                    </uib-tab-heading>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <form>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="type === 'status' || type === 'photo'">
+                        <textarea placeholder="What's on your mind?" msd-elastic class="transparent-input form-control" ng-model="newPost.content"></textarea>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="title">
+                        <div class="form-group">
+                            <input type="text" class="material-style form-control" id="title" ng-model="postTitle">
+                            <label for="title">Title</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-show="type==='opportunity'">
+                        <div class="btn-group" id="type">
+                            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'jobs', 'btn-default':opportunityType !== 'jobs'}" ng-model="opportunityType" uib-btn-radio="'jobs'">Jobs</label>
+                            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'internships', 'btn-default':opportunityType !== 'internships'}" ng-model="opportunityType" uib-btn-radio="'internships'">Interns</label>
+                            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'leads', 'btn-default':opportunityType !== 'leads'}" ng-model="opportunityType" uib-btn-radio="'leads'">Leads</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-show="type==='opportunity' || type==='event'">
+                        <div class="form-group">
+                            <input type="number" class="material-style form-control" id="openings" ng-model="openings">
+                            <label for="openings">{{attendees}}</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-show="type === 'opportunity' || type === 'event' || type === 'donation'">
+                        <div class="form-group">
+                            <p class="input-group">
+                                <input type="text" class="material-style form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" placeholder="Pick Date" />
+                                <span class="input-group-btn">
+                            <label for="openings">{{dateString}}</label>
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="material-icons" style="font-size:18px;">today</i></button>           
+          </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-show="type === 'event'">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="material-style form-control" id="location" ng-model="location">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <textarea placeholder="Describe your post in as much detail" msd-elastic class="form-control material-style" ng-model="description" ng-show="title"></textarea>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="media">
+                        <br>
+                        <div class="well well-lg text-center">
+                            <i class="material-icons">attach_file</i> Drag and Drop files to attach
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+                        <div class="form-group">
+                            <input type="text" class="material-style form-control" id="company" ng-model="company">
+                            <label for="company">Company</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+                        <div class="form-group">
+                            <input type="text" class="material-style form-control" id="industry" ng-model="industry">
+                            <label for="industry">Industry</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+                        <div class="form-group">
+                            <input type="url" class="material-style form-control" id="refurl" ng-model="reful">
+                            <label for="refurl">Reference URL</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+                        <div class="form-group">
+                            <input type="text" class="material-style form-control" id="other" ng-model="other">
+                            <label for="other">Some Other Field</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <br>
+                        <button type="button" class="btn btn-primary pull-right">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

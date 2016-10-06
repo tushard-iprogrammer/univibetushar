@@ -1,0 +1,22 @@
+<div>
+    <div class="abbas-sidebar-wrapper">
+        <img src="https://placehold.it/200x72" class="center-block img-responsive">
+        <ul class="navlinks">
+        	<li ng-show="child">
+        		<a ng-click="child = 0">
+        			<i class="material-icons">arrow_back</i>
+        			Go Back
+        		</a>
+        	</li>
+            <li ng-repeat="menuItem in menuItems" class="animated fadeIn" ng-hide="child">
+                <a ng-click="goto(menuItem.title)" class="text-capitalize"><i class="material-icons">{{menuItem.icon}}</i> {{menuItem.title}}</a>
+            </li>
+        </ul>
+        <ul class="leaderboard list-unstyled animated fadeIn" ng-show="child === 'leaderboard'">
+            <li ng-repeat="leader in leaderBoardList" class="text-center">
+                <a><img ng-srcset="{{leader.profile_picture.normal}} 1x, {{leader.profile_picture.retina}} 2x, {{leader.profile_picture.hires}} 3x"><span>{{leader.name}}</span></a>
+                <small>{{leader.points}} Points</small>
+            </li>
+        </ul>
+    </div>
+</div>

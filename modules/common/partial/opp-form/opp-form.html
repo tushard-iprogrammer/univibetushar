@@ -1,0 +1,92 @@
+<div class="col-md-12">
+    <div class="panel panel-default scroll-panel">
+        <uib-tabset>
+            <uib-tab heading="Opportunities" index="0" select="changeType('opportunity')"></uib-tab>
+            <uib-tab heading="Blogs" index="1" select="changeType('blogs')"></uib-tab>
+            <uib-tab heading="Events" index="2" select="changeType('event')"></uib-tab>
+            <uib-tab heading="Donations" index="3" select="changeType('donation')"></uib-tab>
+            <uib-tab heading="Newsletter" index="4" select="changeType('newsletter')"></uib-tab>
+        </uib-tabset>
+    </div>
+</div>
+<form>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-show="type==='opportunity'">
+        <label for="type">Select opportunity type</label>
+        <br>
+        <div class="btn-group" id="type">
+            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'jobs', 'btn-default':opportunityType !== 'jobs'}" ng-model="opportunityType" uib-btn-radio="'jobs'">Jobs</label>
+            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'internships', 'btn-default':opportunityType !== 'internships'}" ng-model="opportunityType" uib-btn-radio="'internships'">Interns</label>
+            <label class="btn btn-default" ng-class="{'btn-primary':opportunityType === 'leads', 'btn-default':opportunityType !== 'leads'}" ng-model="opportunityType" uib-btn-radio="'leads'">Leads</label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-show="type==='opportunity' || type==='event'">
+        <div class="form-group">
+            <label for="openings">{{attendees}}</label>
+            <input type="number" class="form-control" id="openings" placeholder="Max number of openings">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-show="type === 'opportunity' || type === 'event' || type === 'donation'">
+        <div class="form-group">
+            <label for="openings">{{dateString}}</label>
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="material-icons" style="font-size:18px;">today</i></button>
+          </span>
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-show="type === 'event'">
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Location">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="description">Description</label>
+        <textarea placeholder="Describe your post in as much detail" msd-elastic class="form-control" ng-model="description"></textarea>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <br>
+        <label for="description">Upload Documents</label>
+        <div class="well well-lg tetx-center">
+            <i class="material-icons">attach_file</i> Drag and Drop files to attach
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+        <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" class="form-control" id="company" placeholder="Company Name">
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+        <div class="form-group">
+            <label for="industry">Industry</label>
+            <input type="text" class="form-control" id="industry" placeholder="Industry">
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+        <div class="form-group">
+            <label for="refurl">Reference URL</label>
+            <input type="url" class="form-control" id="refurl" placeholder="Enter Website Link">
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-show="type==='opportunity'">
+        <div class="form-group">
+            <label for="industry">Some Other Field</label>
+            <input type="text" class="form-control" id="industry" placeholder="Placeholder Text">
+        </div>
+    </div>
+</form>
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 visible-xs">
+    <button type="button" class="btn btn-primary btn-block">Save</button>
+</div>
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 visible-xs">
+    <button type="button" class="btn btn-default btn-block">Cancel</button>
+</div>

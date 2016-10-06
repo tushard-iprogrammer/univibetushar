@@ -1,0 +1,90 @@
+<div>
+    <div class="panel panel-default abbas-post-template">
+        <div class="panel-body exclusive-body" ng-show="post.type === 'exclusive'" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+post.cover+')'}" ng-click="goto(post.type, post.subtype)">
+            <button type="button" class="btn btn-outline pull-right" ng-click="goto(post.type, post.subtype)">View</button>
+            <h3 class="text-capitalize"><small>{{post.posted_time | amCalendar:referenceTime:formats}}</small><br>{{post.title}}</h3>
+            <span>{{post.speakers[0].name}} </span><span ng-show="post.speakers.length > 1">&amp; {{post.speakers.length - 1}} others</span>
+        </div>
+        <div class="panel-body" ng-hide="post.type === 'exclusive'">
+            <div class="pull-right">
+                <ul class="list-inline post-control">
+                    <li uib-tooltip="Download file" tooltip-placement="top" ng-show="(post.type === 'opportunities' || post.type==='newsletter') && post.document" class="hidden-xs">
+                        <a class="btn btn-transparent"><i class="material-icons">file_download</i></a>
+                    </li>
+                    <li uib-tooltip="Refer this" tooltip-placement="top" class="hidden-xs">
+                        <a class="btn btn-transparent"><i class="material-icons">beenhere</i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-transparent"><i class="material-icons">expand_more</i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="media abbas-profile-details">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">{{user.first_name}} {{user.last_name}}</h5>
+                    <small>{{post.posted_time | amCalendar:referenceTime:formats}}<br>
+                          <span class="text-muted text-capitalize" ng-show="(post.type || post.subtype) && post.type !== 'status'">Posted in <span class="label label-info">{{post.subtype || post.type}}</span></span><span class="text-warning" ng-show="post.closing_date"><i class="material-icons">timelapse</i> Closes in {{post.closing_date}}</span>
+                    </small>
+                </div>
+            </div>
+            <hr>
+            <h3 ng-show="post.heading" class="text-capitalize">{{post.heading}}</h3>
+            <p class="post-content">
+                {{post.content}}
+                <a ng-show="post.content.length > 200" class="pull-right" ng-click="goto(post.type, post.subtype)">More</a>
+            </p>
+            <div class="row" ng-show="post.media">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div ng-photo-grid="" images="post.media" grid-options="gridOptions"></div>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item abbas-like-bar" ng-show="post.comments.length || post.likes">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="btn btn-transparent"><i class="material-icons">favorite_border</i></a> {{post.likes}}
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-transparent"><i class="material-icons">chat_bubble_outline</i></a> {{post.comments.length}}
+                    </li>
+                    <li class="pull-right">
+                        <a href="#" class="btn btn-transparent"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="#" class="btn btn-transparent"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="#" class="btn btn-transparent"><i class="fa fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-group-item" ng-show="post.comments.length">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <a href="#">
+                            <img class="media-object" src="http://placehold.it/36/f5f5f5/000?text=36px">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <ul class="list-inline pull-right comment-list">
+                            <li><a class="btn btn-transparent"><i class="material-icons">mode_edit</i></a></li>
+                            <li><a class="btn btn-transparent"><i class="material-icons">delete</i></a></li>
+                            <li><a class="btn btn-transparent" uib-tooltip="Report Abuse" tooltip-placement="top"><i class="material-icons">flag</i></a></li>
+                        </ul>
+                        <h5 class="media-heading">{{post.comments[0].name}} <small>{{post.comments[0].time | amCalendar:referenceTime:formats}}</small></h5>
+                        <p>{{post.comments[0].content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <textarea placeholder="Write your comment and press enter" msd-elastic class="form-control comment-textarea" ng-model="newComment"></textarea>
+        </div>
+    </div>
+</div>

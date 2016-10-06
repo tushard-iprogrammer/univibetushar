@@ -1,0 +1,56 @@
+<div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="abbas-preview-image-container">
+                    <img ng-src="{{media}}" class="img-responsive center-block">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <br class="visible-xs">
+                <br class="visible-xs">
+                <ul class="list-inline pull-right comment-list">
+                    <li><a class="btn btn-transparent"><i class="material-icons">mode_edit</i></a></li>
+                    <li><a class="btn btn-transparent"><i class="material-icons">delete</i></a></li>
+                    <li><a class="btn btn-transparent" uib-tooltip="Report Abuse" tooltip-placement="top"><i class="material-icons">flag</i></a></li>
+                    <li><a class="btn btn-transparent" uib-tooltip="Close" tooltip-placement="top" ng-click="$dismiss()" ><i class="material-icons">close</i></a></li>
+                </ul>
+                <div class="media abbas-profile-details">
+                    <div class="media-left media-top">
+                        <a href="#">
+                            <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">{{user.first_name}} {{user.last_name}}</h5>
+                        <small>{{post.posted_time | amCalendar:referenceTime:formats}}<br>
+                    </small>
+                    </div>
+                </div>
+                <hr>
+                <p>
+                    {{post.content}}
+                </p>
+                <hr>
+                <div class="list-group">
+                    <div class="list-group-item abbas-like-bar">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn btn-transparent"><i class="material-icons">favorite_border</i></a> {{post.likes}}
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-transparent"><i class="material-icons">chat_bubble_outline</i></a> {{post.comments.length}}
+                            </li>
+                            <li>
+                                <a class="btn btn-transparent"><i class="material-icons">beenhere</i></a> {{post.referals || 0}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-group-item">
+                        <textarea placeholder="Write your comment and press enter" msd-elastic class="form-control" ng-model="newComment"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,189 @@
+<nav class="navbar navbar-default transparent-nav" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img ng-srcset="{{college.imgUrlNormal}} 1x, {{college.imgUrlRetina}} 2x, {{college.imgUrlRetina3x}} 3x" class="pull-left">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" ui-sref="static">About</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li class="dropdown">
+                    <button type="button" class="btn btn-primary navbar-btn" ui-sref="login">Log In</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="jumbotron landing" ng-hide="banners.length">
+    <div class="container-fluid text-center" ng-hide="slides.length">
+        <h2>{{college.getFinalName()}}</h2>
+        <p>Sign to to network with the people that matter the most</p>
+        <!--<button type="button" class="btn btn-primary btn-lg hidden-xs" ng-click="seeVideo()"><i class="fa fa-youtube-play"></i> Why Join?</button>-->
+        <p class="visible-xs">
+            <a class="btn btn-outline btn-lg">Sign Up</a>
+            <a class="btn btn-primary btn-lg" ui-sref="login">Log In</a>
+        </p>
+    </div>
+</div>
+<div class="jumbotron slideshow" ng-show="banners.length">
+    <div class="container-fluid text-center" bg-slideshow="banners" class="slideshow" interval="10000">
+        <h2>Something</h2>
+        <p>Heresdfadsfadf </p>
+    </div>
+</div>
+<div class="container">
+    <!--
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-offset-2 col-lg-8 text-center">
+            <h3>The better network</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <youtube-video class="embed-responsive-item" video-id="video" player-vars="playerVars"></youtube-video>
+            </div>
+        </div>
+    </div>
+    <br>
+    -->
+    <div class="row hidden-xs center-block">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <h3>What&apos;s going on inside</h3>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4" ng-repeat="item in landindFeedItems">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="#">
+                                        <img class="media-object" ng-src="{{item.profile_picture}}" alt="item.id">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading">{{item.first_name}} {{item.last_name}}</h5>
+                                    <small>{{item.posted_time}}<br>
+                                <span class="text-muted" ng-show="item.type">Posted in {{item.type}}</span>
+                                </small>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="post-content">
+                                {{item.content}}
+                                <a ng-show="item.content.length > 200">More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <h3>Events</h3>
+            <hr>
+            <div class="list-group event">
+                <div class="list-group-item" ng-repeat="event in events">
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" ng-src="{{event.picture}}" alt="event.id">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">{{event.name}}</h5>
+                            <small>{{event.posted_time}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h3>Notable Alumni</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Famous Alumni 1</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Famous Alumni 2</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Famous Alumni 3</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Famous Alumni 4</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hidden-xs">
+    <div class="row text-center hidden-xs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="lead">
+                Miss those college day conversations? They&apos;re waiting for you.
+            </p>
+            <button type="button" class="btn btn-outline btn-lg">Sign up for free</button>
+            <br>
+            <span>
+                Already have an account? <a ui-sref="login"><strong>Log In</strong></a>
+            </span>
+        </div>
+    </div>
+    <div class="row footer hidden-xs">
+        <div class="col-sm-6">
+            Powered by <strong>Univibe Network</strong>
+        </div>
+        <div class="col-sm-6 text-right">
+            <ul class="list-inline">
+                <li>About Institute</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row visible-xs text-center footer">
+        <div class="col-xs-12">
+            Powered by <strong>Univibe Network</strong>
+            <br>
+            <br>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ul class="list-inline">
+                <li>About Institute</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+</div>

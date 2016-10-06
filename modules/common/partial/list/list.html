@@ -1,0 +1,16 @@
+<div class="col-md-3 col-xs-6" ng-repeat="item in items">
+    <div class="panel panel-default picture-panel" ui-sref="base.donation">
+        <div class="panel-heading" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+item.retina_image+')'}">
+            <h3 class="panel-title">{{item.first_name}} {{item.last_name}}</h3>
+        </div>
+        <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non semper leo. Ut consectetur nunc ut dolor suscipit, at laoreet diam sollicitudin.
+            <br>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width:60%">
+                    <span>60% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

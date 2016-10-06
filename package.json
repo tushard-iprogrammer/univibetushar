@@ -1,0 +1,51 @@
+{
+  "name": "univibe",
+  "version": "0.0.1",
+  "description": "Package generated using the yeoman project, for the univibe UI rewrite",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbasdawood/univibefrontend.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-angular-templates": "latest",
+    "grunt-browser-output": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-dom-munger": "latest",
+    "grunt-karma": "~0.8.3",
+    "grunt-ng-annotate": "latest",
+    "karma": "~0.12.6",
+    "karma-chrome-launcher": "~0.1.3",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-jasmine": "~0.1.5",
+    "karma-mocha-reporter": "~0.2.5",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "load-grunt-tasks": "~0.2",
+    "request": "^2.74.0"
+  },
+  "dependencies": {},
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/abbasdawood/univibefrontend/issues"
+  },
+  "homepage": "https://github.com/abbasdawood/univibefrontend#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "univibe"
+  ],
+  "author": "abbasdawood",
+  "contributors":[],
+  "license": "ISC"
+}

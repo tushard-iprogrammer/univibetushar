@@ -1,0 +1,107 @@
+<div id="right-panel">
+    <div class="panel panel-default">
+        <div class="list-group" ng-show="active === 'about'">
+            <div class="list-group-item">
+                <button type="button" class="btn btn-default btn-sm pull-right">Read On</button>
+                <h4 class="list-group-item-heading">Deans' Message</h4>
+                <p class="list-group-item-text">Content goes here</p>
+            </div>
+            <div class="list-group-item">
+                <button type="button" class="btn btn-default btn-sm pull-right">Read On</button>
+                <h4 class="list-group-item-heading">Directors' Message</h4>
+                <p class="list-group-item-text">Content goes here</p>
+            </div>
+            <div class="list-group-item">
+                <button type="button" class="btn btn-default btn-sm pull-right">Read On</button>
+                <h4 class="list-group-item-heading">Someone Else' Message</h4>
+                <p class="list-group-item-text">Content goes here</p>
+            </div>
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">Contact Us</h4>
+                <p class="list-group-item-text">
+                    Important Numbers
+                    <ul class="list-unstyled">
+                        <li><strong>Office</strong> +91 22 1231 9812</li>
+                        <li><strong>Rector</strong> +91 22 1231 9812</li>
+                        <li><strong>Someone Else</strong> +91 22 1231 9812</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="list-group abbas-list-group">
+            <!-- Search Filters go here for pages that need search -->
+            <!-- end -->
+            <!-- right panel for the inbox page -->
+            <!-- end -->
+            <!-- right panel for the mentorship page -->
+            <!-- end -->
+            <!-- right panel for the institute page -->
+            <!-- end -->
+            <!-- right panel for the new post page -->
+            <div class="list-group-item" ng-show="active === 'form'">
+                <!-- Options specific to the type of form -->
+            </div>
+            <div class="list-group-item" ng-show="active === 'form'">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button type="button" class="btn btn-primary btn-block">Save</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button type="button" class="btn btn-default btn-block">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <!-- Below right panel content for feed page -->
+            <div class="list-group-item" ng-show="active === 'feed'">
+                <i class="material-icons pull-left">today</i>
+                <a class="pull-right text-uppercase" ui-sref="base.events({id:1231})">See All</a>
+                <h5 class="list-group-item-heading">2 Events Today</h5>
+            </div>
+            <div class="list-group-item" ng-show="active === 'feed'">
+                <i class="material-icons pull-left">theaters</i>
+                <a class="pull-right text-uppercase" ui-sref="base.exclusive-list">See All</a>
+                <h5 class="list-group-item-heading">Exclusive Content</h5>
+                <ul class="media-list">
+                    <li class="media" ng-repeat="content in exclusiveContent">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" ng-src="{{content.thumb}}">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading text-capitalize">{{content.title}}</h5> {{content.authors[0].name}} <span ng-show="content.authors.length > 1">&amp; {{content.authors.length -1 }} others</span>
+                            <br>
+                            <span class="text-muted text-capitalize">{{content.time | amCalendar:referenceTime:formats}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-group-item" ng-show="active === 'feed'">
+                <i class="material-icons pull-left">work</i>
+                <a class="pull-right text-uppercase">See All</a>
+                <h5 class="list-group-item-heading">Opportunities</h5>
+                <div class="btn-group scroller">
+                    <button type="button" class="btn btn-default btn-xs">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-xs">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                    </button>
+                </div>
+                <h5 class="abbas-opportunity-heading">Assistant General Manager, Information Technology Department</h5>
+                <span class="text-muted">Pune, 6-7 Years • Jobs</span>
+                <p class="list-group-item-text">
+                    Of recommend residence education be on difficult repulsive offending. Judge views had mirth table seems great him for her. Alone all happy asked begin fully stand own get. Excuse ye seeing result of we. See scale dried songs old may not.
+                </p>
+            </div>
+        </div>
+    </div>
+    <ul class="list-inline text-muted">
+        <li>Terms</li>
+        <li>Privacy</li>
+        <li>Feedback</li>
+        <li>Contact</li>
+        <li>Help &amp; FAQ</li>
+    </ul>
+</div>

@@ -1,0 +1,54 @@
+<div class="container login">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-md-4 col-lg-4">
+            <img ng-srcset="{{college.imgUrlNormal}} 1x, {{college.imgUrlRetina}} 2x, {{college.imgUrlRetina3x}} 3x" class="center-block" ui-sref="landing">
+            <h3 class="text-center" ui-sref="landing">{{college.getFinalName()}}</h3>
+            <hr>
+            <h4 class="text-center">Log in to continue</h4>
+            <div class="panel panel-default login-panel">
+                <form>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="username" class="material-style form-control" ng-model="user.email" required>
+                                    <label for="username">Email Address or Username</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" class="material-style form-control" ng-model="user.password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Log In" ui-sref="base.feed">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h5 class="text-center">Alternatively, You can</h5>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <button type="button" class="btn btn-facebook btn-block">
+                                    <i class="fa fa-facebook-official"></i> Use Facebook
+                                </button>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <button type="button" class="btn btn-linkedin btn-block">
+                                    <i class="fa fa-linkedin"></i> Use LinkedIn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel panel-default panel-transparent">
+                <div class="panel-body text-center">
+                    Are you new here? <a href="#">Create an account</a>
+                </div>
+            </div>
+            <p class="text-center"><a href="#">Lost Your Password?</a></p>
+        </div>
+    </div>
+</div>

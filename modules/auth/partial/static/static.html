@@ -1,0 +1,131 @@
+<nav class="navbar navbar-default transparent-nav" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img ng-srcset="{{college.imgUrlNormal}} 1x, {{college.imgUrlRetina}} 2x, {{college.imgUrlRetina3x}} 3x" class="pull-left">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" ui-sref="static">About</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li class="dropdown">
+                    <button type="button" class="btn btn-primary navbar-btn" ui-sref="login">Log In</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="jumbotron landing">
+    <div class="container-fluid text-center">
+        <h2>{{college.getFinalName()}}</h2>
+        <p>Sign to to network with the people that matter the most</p>
+        <p class="visible-xs">
+            <a class="btn btn-outline btn-lg">Sign Up</a>
+            <a class="btn btn-primary btn-lg" ui-sref="login">Log In</a>
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="row hidden-xs center-block">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+            <h3>Some Title</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-5 col-md-offset-1" ng-show="feature">
+            <img ng-srcset="{{feature.imgUrlNormal}} 1x, {{feature.imgUrlRetina}} 2x, {{feature.imgUrlRetina3x}} 3x" class="img-responsive center-block">
+        </div>
+        <div class="col-xs-12" ng-class="{'col-md-5':feature, 'col-md-10 col-md-offset-1':!feature}">
+        	It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+            <br><br><h3>Inner Stuff</h3><br><br>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Post 1</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Post 2</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Post 3</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="panel panel-default picture-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Post 4</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hidden-xs">
+    <div class="row text-center hidden-xs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="lead">
+                Miss those college day conversations? They&apos;re waiting for you.
+            </p>
+            <button type="button" class="btn btn-outline btn-lg">Sign up for free</button>
+            <br>
+            <span>
+                Already have an account? <a ui-sref="login"><strong>Log In</strong></a>
+            </span>
+        </div>
+    </div>
+    <div class="row footer hidden-xs">
+        <div class="col-sm-6">
+            Powered by <strong>Univibe Network</strong>
+        </div>
+        <div class="col-sm-6 text-right">
+            <ul class="list-inline">
+                <li>About Institute</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row visible-xs text-center footer">
+        <div class="col-xs-12">
+            Powered by <strong>Univibe Network</strong>
+            <br>
+            <br>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ul class="list-inline">
+                <li>About Institute</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+</div>

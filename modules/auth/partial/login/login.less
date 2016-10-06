@@ -1,0 +1,79 @@
+.login-panel {
+    form {
+        .form-group {
+            input.material-style.form-control {
+                border-radius: 0;
+                padding: 32px 8px 16px;
+                display: block;
+                border: none;
+                border-bottom: 1px solid @gray-lighter;
+                &::-webkit-input-placeholder,
+                &::-moz-placeholder,
+                &::placeholder {
+                    color: transparent;
+                }
+                &:active,
+                &.active {
+                    border-bottom-color: @brand-primary;
+                }
+            }
+        }
+    }
+    input[type="submit"] {
+        margin-top: 16px;
+    }
+}
+
+.container.login {
+    margin-top: 30px;
+    img {
+        display: block;
+        height: 48px;
+        @media screen and (min-width: 768px) {
+            height: 96px;
+            width: auto;
+        }
+    }
+}
+
+.panel-transparent {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn {
+    &.btn-facebook {
+        @facebook-blue: #3b5998;
+        background-color: @facebook-blue;
+        color: white;
+        border-color: lighten(@facebook-blue, 10%);
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: lighten(@facebook-blue, 10%);
+            border-color: lighten(@facebook-blue, 10%);
+            color: white;
+        }
+        i {
+            margin-right: 8px;
+        }
+    }
+    &.btn-linkedin {
+        @linkedin-blue: #0077b5;
+        background-color: @linkedin-blue;
+        color: white;
+        border-color: lighten(@linkedin-blue, 10%);
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: lighten(@linkedin-blue, 10%);
+            border-color: lighten(@linkedin-blue, 10%);
+            color: white;
+        }
+        i {
+            margin-right: 8px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<div class="col-md-12 main-panel">
+    <div class="panel panel-default abbas-profile-card">
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object" src="https://robohash.org/ankitporwal.png?size=96x96&set=set1" alt="Ankit Porwal">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">Ankit Porwal <i class="material-icons">check_circle</i></h3>
+                    <span class="tagline">COO &amp; Co-founder, Univibe Network</span>
+                    <br>
+                    <span class="text-muted">MBA Tech, Batch of 2012</span><br>
+                    <span class="label label-primary">1,732 Points</span>
+                </div>
+            </div>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <!-- Single button -->
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons hidden-xs">settings</i> <i class="material-icons">keyboard_arrow_down</i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a><strong>Preferences</strong></a></li>
+                        <li><a href="#"><i class="material-icons">face</i>Become a mentor</a></li>
+                        <li><a href="#"><i class="material-icons">monetization_on</i>I can donate</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><i class="material-icons">check_circle</i>Mark Renowned User</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><i class="material-icons">flag</i>Report Abuse</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <i class="material-icons">move_to_inbox</i> Message
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <i class="material-icons">rss_feed</i> Follow
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <i class="fa fa-hand-paper-o"></i> Mentor Me
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item life-member">
+                <button type="button" class="btn btn-primary pull-right">Get Started</button>
+                <h5 class="list-group-item-heading">Become a life member</h5>
+                <p class="list-group-item-heading">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+            </li>
+        </ul>
+        <div class="panel-footer">
+            <uib-tabset active="0">
+                <uib-tab heading="All Posts" index="0"></uib-tab>
+                <uib-tab heading="About" index="1"></uib-tab>
+                <uib-tab heading="Opportunities" index="2"></uib-tab>
+                <uib-tab heading="Media" index="3"></uib-tab>
+                <uib-tab heading="Events" index="4"></uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+    <post ng-repeat="item in feedItems" post="item.post" user="item.user"></post>
+</div>

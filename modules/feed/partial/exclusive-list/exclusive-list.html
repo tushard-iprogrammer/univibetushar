@@ -1,0 +1,45 @@
+<div class="col-md-12">
+    <h3><i class="material-icons">whatshot</i> Trending Topics</h3>
+    <hr>
+    <div class="row row-horizon">
+        <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 slide" ng-repeat="slide in contents">
+            <div class="panel panel-default" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+slide.cover+')'}">
+                <div class="panel-body">
+                    <h4>{{slide.title}}</h4>
+                    <small ng-show="slide.authors">{{slide.authors[0]}} </span><span ng-show="slide.authors.length > 1">&amp; {{slide.authors.length - 1}} others</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="search-container pull-right">
+            <div class="input-group search pull-right">
+                <span class="input-group-addon" id="basic-addon1">
+                            <i class="material-icons">search</i>
+                        </span>
+                <input type="search" id="search" class="form-control" placeholder="Search" required="required" ng-model="searchText">
+            </div>
+        </div>
+        <uib-tabset active="0">
+            <uib-tab heading="All" index="0"></uib-tab>
+            <uib-tab heading="Live" index="1"></uib-tab>
+            <uib-tab heading="Recordings" index="2"></uib-tab>
+            <uib-tab heading="Alumni Speak" index="3"></uib-tab>
+            <uib-tab heading="Courses" index="3"></uib-tab>
+        </uib-tabset>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 slide" ng-repeat="slide in contents">
+    <div class="panel panel-default" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+slide.cover+')'}">
+        <div class="panel-body">
+            <span class="label text-uppercase" ng-class="{'label-primary':slide.type === 'live','label-warning':slide.type === 'recorded','label-info':slide.type === 'alumni','label-success':slide.type === 'courses'}">{{slide.type}}</span>
+            <h4>{{slide.title}}</h4>
+            <small ng-show="slide.authors">{{slide.authors[0]}} </span><span ng-show="slide.authors.length > 1">&amp; {{slide.authors.length - 1}} others</small>
+        </div>
+        <div class="panel-footer">
+        	<p>{{slide.subtitle}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,174 @@
+<div class="abbas-wrapper">
+    <div class="abbas-sidebar-wrapper">
+        <ul class="navlinks" ng-show="!leaderboard">
+            <li>
+                <a><i class="material-icons">info_outline</i> About Us</a>
+            </li>
+            <li>
+                <a ui-sref="base.donation"><i class="material-icons">card_giftcard</i> Donations</a>
+            </li>
+            <li>
+                <a><i class="material-icons">chrome_reader_mode</i> Newsletters</a>
+            </li>
+            <li>
+                <a><i class="material-icons">comment</i> Testimonials</a>
+            </li>
+            <li>
+                <a ng-click="leaderboard = !leaderboard"><i class="material-icons">trending_up</i> Leaderboard</a>
+            </li>
+        </ul>
+        <ul class="leaderboard list-unstyled" ng-show="leaderboard">
+            <li ng-repeat="leader in leaderBoardList" class="text-center">
+                <a><img ng-src="{{leader.profile_picture}}"><span>{{leader.name}}</span></a>
+                <small>{{leader.points}} Points</small>
+            </li>
+        </ul>
+    </div>
+    <nav class="navbar navbar-default abbas-custom-nav navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="product-image" ui-sref="base.feed"></div>
+                </div>
+                <div class="hidden-xs col-md-3">
+                    <div class="input-group search">
+                        <span class="input-group-addon" id="basic-addon1">
+                            <i class="material-icons">search</i>
+                        </span>
+                        <input type="search" id="search" class="form-control" placeholder="Search" required="required" ng-model="searchText">
+                    </div>
+                </div>
+                <div class="hidden-xs col-md-4">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Network</a>
+                        </li>
+                        <li>
+                            <a href="#">Mentorship</a>
+                        </li>
+                        <li>
+                            <a href="#" ui-sref="base.feed">Feed</a>
+                        </li>
+                        <li>
+                            <a href="#">Groups</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-7 hidden-xs">
+                    <ul class="list-inline icon-list">
+                        <li>
+                            <a class="btn btn-transparent" uib-popover-template="'inviteTemplate.html'" popover-title="Invite Friends" popover-placement="bottom" popover-trigger="outsideClick">
+                                <i class="material-icons">person_add</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <span class="abbas-notification-count">200</span>
+                                <i class="material-icons">inbox</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent" uib-popover-template="'modules/common/partial/notificationPopover/notificationPopover.html'" popover-title="Notifications" popover-placement="bottom" popover-trigger="outsideClick">
+                                <span class="abbas-notification-count">1</span>
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-7 visible-xs">
+                    <ul class="list-inline icon-list" ng-controller="BaseCtrl">
+                        <li>
+                            <a class="btn btn-transparent" ng-click="openNav()">
+                                <i class="material-icons">menu</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <i class="material-icons">person_add</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <span class="abbas-notification-count">200</span>
+                                <i class="material-icons">inbox</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <span class="abbas-notification-count">1</span>
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-transparent">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-5 text-right">
+                    <div class="abbas-profile-picture-frame pull-right">
+                        <img src="https://robohash.org/ankitporwal.jpg?size=40x40&set=set1" alt="profile-picture" ui-sref="base.profile"> <span class="hidden-xs">Ankit</span>
+                        <a href="#"><i class="material-icons pull-right">more_vert</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="abbas-content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                	<div class="btn-group pull-right">
+                    <button type="button" class="btn btn-default btn-sm"><i class="material-icons">add</i> New Chat</button>
+                    <button type="button" class="btn btn-default btn-sm" ng-click="hide = !hide"><i class="material-icons">remove_red_eye</i> Hide All</button>
+                		
+                	</div>
+                    <h4><i class="material-icons">inbox</i> Recent Chats</h4>
+                    <hr ng-hide="hide">
+                    <div class="row row-horizon" ng-hide="hide">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="user in userList">
+                            <div class="media abbas-profile-details">
+                                <div class="media-left media-top">
+                                    <a href="#">
+                                        <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading">{{user.first_name}} {{user.last_name}}</h5>
+                                    <small class="text-muted text-nowrap">{{user.time}} {{user.sentence}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <hr ng-hide="hide">
+                    <div class="panel panel-default chat-panel" ng-style="{'height':hide ? '550px' : '400px'}">
+                        <div class="panel-heading">
+                            <div class="media abbas-profile-details">
+                                <div class="media-left media-top">
+                                    <a href="#">
+                                        <img class="media-object" ng-src="{{userList[0].profile_picture}}" alt="userList[0].id">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading">{{userList[0].first_name}} {{userList[0].last_name}}</h5>
+                                    <small class="text-muted">{{userList[0].sentence}}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            Panel content
+                        </div>
+                        <div class="panel-footer">
+                            <textarea placeholder="Write your comment and press enter" msd-elastic class="form-control" ng-model="newComment"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

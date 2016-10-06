@@ -1,0 +1,12 @@
+.abbas-skill-list {
+    word-wrap: break-word;
+    span::after {
+        content: ',';
+        margin-right: 4px;
+    }
+    span:last-child{
+    	&::after{
+    		content:'';
+    	}
+    }
+}
