@@ -126,3 +126,6 @@ All contributors must make use of standard angular conventions of directives, mo
 
 ## Upgrading
 The contributors may upgrade to the newer form of coding using the ng best practices by visiting [this](https://github.com/cgross/generator-cg-angular15) 
+
+## Copyright
+All of this code is copyrighted content of Univibe, under a private license that ensures this code may not be used by anyone without the consent of [Univibe network](http://univibenetwork.in). Originally authored by [Abbas Dawood](https://github.com/abbasdawood) from [Vulpe](https://vulpe.in)
