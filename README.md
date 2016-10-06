@@ -122,20 +122,21 @@ However, the form shall be rendered differently for forms that are spawned from 
 
 ## Links that work
 Following links work at this point in time:
-| Page                  | Page URL                                                              | Element                                                                           | Direct URL                        |
+
+| Page  | Page URL  | Element   | Direct URL    |
 |---------------------  |-------------------------------------------------------------------    |---------------------------------------------------------------------------------  |--------------------------------   |
-| Landing               | http://localhost:9001/#/welcome                                       | Log In                                                                            | http://localhost:9001/#/login     |
-| Static                | http://localhost:9001/#/welcome                                       | About                                                                             | http://localhost:9001/#/static    |
-| Feed                  | http://localhost:9001/#/app/feed                                      | Home, Network, Invite, Inbox, Notifications, 'Ankit', Posts (more), Right Panel   | /                                 |
-| Listing               | http://localhost:9001/#/app/list/type                                 |                                                                                   |                                   |
-| Profile               | http://localhost:9001/#/app/profile                                   |                                                                                   |                                   |
-| Video List            | http://localhost:9001/#/app/list/exclusive                            |                                                                                   |                                   |
-| Status Detail Page    | http://localhost:9001/#/app/detail/status/123                         |                                                                                   |                                   |
-| Video Detail          | http://localhost:9001/#/app/detail/exclusive/789?type=liveContent     |                                                                                   |                                   |
-| Donations Detail      | http://localhost:9001/#/app/detail/donation/                          | 46 Contributions                                                                  |                                   |
-| Event Detail          | http://localhost:9001/#/app/detail/event/1231                         |                                                                                   |                                   |
-| About Institute       | http://localhost:9001/#/app/about                                     |                                                                                   |                                   |
-| New Individual Form   | http://localhost:9001/#/app/new                                       |                                                                                   |                                   |
+| Landing   | http://localhost:9001/#/welcome   | Log In    | http://localhost:9001/#/login     |
+| Static    | http://localhost:9001/#/welcome   | About     | http://localhost:9001/#/static    |
+| Feed  | http://localhost:9001/#/app/feed  | Home, Network, Invite, Inbox, Notifications, 'Ankit', Posts (more), Right Panel   | /     |
+| Listing   | http://localhost:9001/#/app/list/type     |   |   |
+| Profile   | http://localhost:9001/#/app/profile   |   |   |
+| Video List    | http://localhost:9001/#/app/list/exclusive    |   |   |
+| Status Detail Page    | http://localhost:9001/#/app/detail/status/123     |   |   |
+| Video Detail  | http://localhost:9001/#/app/detail/exclusive/789?type=liveContent     |   |   |
+| Donations Detail  | http://localhost:9001/#/app/detail/donation/  | 46 Contributions  |   |
+| Event Detail  | http://localhost:9001/#/app/detail/event/1231     |   |   |
+| About Institute   | http://localhost:9001/#/app/about     |   |   |
+| New Individual Form   | http://localhost:9001/#/app/new   |   |   |
 
 
 ## Contributing
