@@ -2,7 +2,8 @@ angular.module('auth').controller('LandingCtrl', function($scope, $uibModal) {
 
     $scope.video = 'wlWsIH_bUKU';
 
-    $scope.events1 = [1, 2, 3, 4];
+    $scope.events1 = [1, 2];
+    $scope.sponsors = [1, 2, 3, 4, 5, 6];
     $scope.events2 = [1, 2, 3];
 
     $scope.landindFeedItems = [{
