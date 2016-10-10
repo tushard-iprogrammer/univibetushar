@@ -3,7 +3,8 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img ng-srcset="{{college.imgUrlNormal}} 1x, {{college.imgUrlRetina}} 2x, {{college.imgUrlRetina3x}} 3x" class="pull-left">
+                <img ng-srcset="{{college.imgUrlNormal}} 1x, {{college.imgUrlRetina}} 2x, {{college.imgUrlRetina3x}} 3x"
+                    class="pull-left">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,56 +34,38 @@
     </div>
 </div>
 <div class="jumbotron slideshow" ng-show="banners.length">
-    <div class="container-fluid text-center" bg-slideshow="banners" class="slideshow" interval="10000">
+    <div class="container-fluid text-center" bg-slideshow="banners" class="slideshow"
+        interval="10000">
         <h2>Something</h2>
         <p>Heresdfadsfadf </p>
     </div>
 </div>
-<div class="container">
-    <!--
+<div class="container landing-container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-offset-2 col-lg-8 text-center">
-            <h3>The better network</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-                <youtube-video class="embed-responsive-item" video-id="video" player-vars="playerVars"></youtube-video>
-            </div>
-        </div>
-    </div>
-    <br>
-    -->
-    <div class="row hidden-xs center-block">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <h3>What&apos;s going on inside</h3>
+            <button type="button" class="btn btn-primary btn-sm pull-right">See All</button>
+            <h3>Stories from Alumni</h3>
             <hr>
             <div class="row">
-                <div class="col-xs-12 col-sm-4" ng-repeat="item in landindFeedItems">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <a href="#">
-                                        <img class="media-object" ng-src="{{item.profile_picture}}" alt="item.id">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">{{item.first_name}} {{item.last_name}}</h5>
-                                    <small>{{item.posted_time}}<br>
-                                <span class="text-muted" ng-show="item.type">Posted in {{item.type}}</span>
-                                </small>
-                                </div>
-                            </div>
-                            <hr>
-                            <p class="post-content">
-                                {{item.content}}
-                                <a ng-show="item.content.length > 200">More</a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <img src="https://placehold.it/400x300" class="img-responsive center-block">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <h4>Post Title<br><small>Person Name</small></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <h3>Events</h3>
+            <h3>Newsroom</h3>
             <hr>
             <div class="list-group event">
                 <div class="list-group-item" ng-repeat="event in events">
@@ -94,7 +77,7 @@
                         </div>
                         <div class="media-body">
                             <h5 class="media-heading">{{event.name}}</h5>
-                            <small>{{event.posted_time}}
+                            <small>{{event.posted_time}}</small>
                         </div>
                     </div>
                 </div>
@@ -102,49 +85,120 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button type="button" class="btn btn-primary btn-sm pull-right">See All</button>
+            <h3>Events</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="event in events1">
+            <img src="https://placehold.it/400x300" class="img-responsive center-block">
+            <h4>Event 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12 col-md-12">
+            <br>
+            <button type="button" class="btn btn-primary btn-sm pull-right">See Others</button>
             <h3>Notable Alumni</h3>
             <hr>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-            <div class="panel panel-default picture-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Famous Alumni 1</h3>
-                </div>
-                <div class="panel-body">
-                    Panel content
+            <img src="https://placehold.it/400x300" class="img-responsive center-block">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-9 col-lg-9">
+            <h4>Dr. Shiv Sagar <br><small>(Batch of 1989)</small></h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+            <button type="button" class="btn btn-primary">View Dr. Shiv's Profile</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <br>
+            <button type="button" class="btn btn-primary btn-sm pull-right">See All</button>
+            <h3>Videos &amp; Webinars</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <img src="https://placehold.it/400x300" class="img-responsive center-block">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <h4>How to Make great Startups<br><small>7 min 45 seconds</small></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+            <button type="button" class="btn btn-primary">Learn More</button>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <button type="button" class="btn btn-primary btn-sm pull-right">See All</button>
+            <h3>Recent Playlist</h3>
+            <div class="list-group videos">
+                <div class="list-group-item" ng-class="{'active':$index === 0}" ng-repeat="event in events">
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" src="https://placehold.it/48?text=21+Oct">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="pull-right">7 min 45 sec</small>
+                            <h5 class="media-heading">Event {{$index + 1}}</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <br><br>
+            <h3>Give Back</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="event in events2">
             <div class="panel panel-default picture-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Famous Alumni 2</h3>
+                <div class="panel-heading" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75))'}">
+                    <h4 class="panel-title">Campaign Name</h4>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non semper leo. Ut
+                    consectetur nunc ut dolor suscipit, at laoreet diam sollicitudin.
+                    <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width:60%">
+                            <span>60% Complete</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-            <div class="panel panel-default picture-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Famous Alumni 3</h3>
-                </div>
-                <div class="panel-body">
-                    Panel content
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-            <div class="panel panel-default picture-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Famous Alumni 4</h3>
-                </div>
-                <div class="panel-body">
-                    Panel content
-                </div>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <br>
+            <h3>What's trending about us</h3>
+            <hr>
+            <img src="https://placehold.it/800x600?text=lifestream+from+social+media+comes+here"
+                class="img-responsive center-block" alt="Image">
         </div>
     </div>
     <hr class="hidden-xs">
@@ -155,9 +209,7 @@
             </p>
             <button type="button" class="btn btn-outline btn-lg">Sign up for free</button>
             <br>
-            <span>
-                Already have an account? <a ui-sref="login"><strong>Log In</strong></a>
-            </span>
+            <span>Already have an account? <a ui-sref="login"><strong>Log In</strong></a></span>
         </div>
     </div>
     <div class="row footer hidden-xs">
@@ -187,3 +239,4 @@
         </div>
     </div>
 </div>
+

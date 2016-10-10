@@ -6,7 +6,7 @@
     height: 48px;
     background-color: transparent;
     border-color: transparent;
-    z-index:100000;
+    z-index: 100000;
     @media screen and (min-width: 768px) {
         height: 72px;
     }
@@ -23,8 +23,8 @@
         img {
             width: 180px;
             height: 48px;
-            @media screen and (min-width:768px){
-                height:72px;
+            @media screen and (min-width: 768px) {
+                height: 72px;
                 width: 200px;
             }
         }
@@ -43,8 +43,8 @@
     li {
         a {
             color: #222;
-            &:hover{
-                color:@brand-primary;
+            &:hover {
+                color: @brand-primary;
                 opacity: 0.75;
             }
         }
@@ -55,7 +55,7 @@
     margin-top: 0px;
     padding-top: 86px;
     height: auto;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url('img/bannerresource_mobile.png') no-repeat;
     background-size: cover;
     h2 {
@@ -185,10 +185,29 @@
     }
 }
 
-.event{
-    border:none;
-    .list-group-item{
+.event {
+    border: none;
+    .list-group-item {
         border-color: transparent;
-        padding:8px 0;
+        padding: 8px 0;
+    }
+}
+
+.videos {
+    .list-group-item {
+        border-color: transparent;
+        padding: 8px 16px;
+    }
+}
+
+.landing-container {
+    h3::before {
+        margin-top: 16px;
+    }
+    h3 {
+        margin-top: 0;
+    }
+    p {
+        font-size: 14px;
     }
 }
