@@ -38,9 +38,12 @@ angular.module('auth').directive('bgSlideshow', function($interval, $uibModal) {
 
             var change = $interval(function() {
                 scope.active_image++;
-                if (scope.active_image >= scope.banners.length) {
-                    scope.active_image = 0;
+                if (scope.banners) {
+                    if (scope.active_image >= scope.banners.length) {
+                        scope.active_image = 0;
+                    }
                 }
+
             }, scope.interval || 1000);
 
             scope.$on('$destroy', function() {

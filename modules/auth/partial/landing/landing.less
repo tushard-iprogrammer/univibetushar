@@ -211,3 +211,22 @@
         font-size: 14px;
     }
 }
+
+.parallax {
+    z-index: -10;
+    position: absolute;
+    height: 500px;
+    width: 100vw;
+    &.first {
+        top: 700px;
+    }
+    &.second {
+        top: 1300px;
+    }
+    &.third {
+        top: 2000px;
+    }
+    &.fourth {
+        top: 2500px;
+    }
+}

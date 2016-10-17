@@ -143,6 +143,25 @@ angular.module('auth').controller('LandingCtrl', function($scope, $uibModal) {
         autoplay: 1
     };
 
+    $('#parallax1').parallax({
+        naturalWidth: 600,
+        naturalHeight: 400
+    });
+
+    $('#parallax2').parallax({
+        naturalWidth: 600,
+        naturalHeight: 400
+    });
+    $('#parallax3').parallax({
+        naturalWidth: 600,
+        naturalHeight: 400
+    });
+    $('#parallax4').parallax({
+        naturalWidth: 600,
+        naturalHeight: 400
+    });
+    
+
 
     /*$scope.banners = [{
         title: 'First Slide here',
