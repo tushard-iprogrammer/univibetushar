@@ -144,20 +144,20 @@ angular.module('auth').controller('LandingCtrl', function($scope, $uibModal) {
     };
 
     $('#parallax1').parallax({
-        naturalWidth: 600,
+        naturalWidth: 1600,
         naturalHeight: 400
     });
 
     $('#parallax2').parallax({
-        naturalWidth: 600,
+        naturalWidth: 1600,
         naturalHeight: 400
     });
     $('#parallax3').parallax({
-        naturalWidth: 600,
+        naturalWidth: 1600,
         naturalHeight: 400
     });
     $('#parallax4').parallax({
-        naturalWidth: 600,
+        naturalWidth: 1600,
         naturalHeight: 400
     });
     
