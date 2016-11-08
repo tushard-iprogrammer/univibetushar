@@ -160,7 +160,6 @@ angular.module('auth').controller('LandingCtrl', function($scope, $uibModal) {
         naturalWidth: 1600,
         naturalHeight: 400
     });
-    
 
 
     /*$scope.banners = [{

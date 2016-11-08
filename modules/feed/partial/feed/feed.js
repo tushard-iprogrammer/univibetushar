@@ -155,4 +155,11 @@ angular.module('feed').controller('FeedCtrl', function($scope) {
     ];
 
     $scope.$emit('render-right-panel', { page: 'feed' });
+
+    //Required for removing parallax effect from inner sections
+    $('parallax1').hide();
+    $('parallax2').hide();
+    $('parallax3').hide();
+    $('parallax4').hide();
+
 });

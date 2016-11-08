@@ -5,6 +5,8 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @fa-font-path: "bower_components/font-awesome/fonts";
+@icon-font-path: "bower_components/bootstrap/fonts/";
+@icon-font-name: "glyphicons-halflings-regular";
 @import (inline) "bower_components/bootstrap-horizon/bootstrap-horizon.css";
 @import (inline) "bower_components/angular-aside/dist/css/angular-aside.css";
 @import (inline) "bower_components/ng-photo-grid/css/style.css";
@@ -173,6 +175,15 @@ button.btn {
             background: rgba(255, 255, 255, 0.8);
         }
     }
+    &.btn-info{
+        color:@brand-info;
+    }
+    &.btn-success{
+        color:@brand-success;
+    }
+    &.btn-danger{
+        color:@brand-danger;
+    }
     &.sm {
         i {
             font-size: 18px;
@@ -314,3 +325,11 @@ body {
     // line-height: 1.5
     //letter-spacing: 1px;
 }
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+
+
+

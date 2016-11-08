@@ -13,14 +13,17 @@
     padding: 0;
     overflow-x: hidden;
     @media screen and (min-width: 768px) {
-        padding-top:64px;
+        padding-top: 64px;
         //padding-left: 15px;
         margin-left: 0;
     }
 }
 
 .univibe-content-wrapper {
-    padding-top: 0px;
+    padding-top: 57px;
+    @media screen and (min-width: 768px) {
+        padding-top: 0;
+    }
     width: 100%;
 }
 
@@ -31,6 +34,11 @@
     border-radius: 0;
     border-bottom: 1px solid #efefef;
     margin-bottom: 0;
+    width: 100vw;
+    @media screen and (min-width: 768px) {
+        width: 86%;
+        /* Required for Moz fix */
+    }
     .container-fluid {
         .row {
             padding-top: 10px;
@@ -64,14 +72,22 @@
                 }
                 &.icon-list {
                     li {
-                        max-width: 36px;
+                        max-width: 30px;
                         width: auto;
                         margin-top: -8px;
                         i {
                             color: @color-light;
                         }
                     }
-                    @media screen and (min-width:768px) {
+                    @media screen and (min-width: 768px) {
+                        li {
+                            max-width: 36px;
+                            width: auto;
+                            margin-top: -8px;
+                            i {
+                                color: @color-light;
+                            }
+                        }
                         border-left: 1px solid lighten(@brand-primary, 10%);
                     }
                 }
@@ -307,7 +323,7 @@ ul.nav-tabs {
     }
 }
 
-.custom-fixed{
+.custom-fixed {
     position: fixed;
     z-index: 999;
 }

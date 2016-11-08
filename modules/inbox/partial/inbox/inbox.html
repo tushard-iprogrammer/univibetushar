@@ -1,35 +1,8 @@
 <div class="main-wrapper">
-    <div class="univibe-sidebar-wrapper">
-        <ul class="navlinks" ng-show="!leaderboard">
-            <li>
-                <a><i class="material-icons">info_outline</i> About Us</a>
-            </li>
-            <li>
-                <a ui-sref="base.donation"><i class="material-icons">card_giftcard</i> Donations</a>
-            </li>
-            <li>
-                <a><i class="material-icons">chrome_reader_mode</i> Newsletters</a>
-            </li>
-            <li>
-                <a><i class="material-icons">comment</i> Testimonials</a>
-            </li>
-            <li>
-                <a ng-click="leaderboard = !leaderboard"><i class="material-icons">trending_up</i> Leaderboard</a>
-            </li>
-        </ul>
-        <ul class="leaderboard list-unstyled" ng-show="leaderboard">
-            <li ng-repeat="leader in leaderBoardList" class="text-center">
-                <a><img ng-src="{{leader.profile_picture}}"><span>{{leader.name}}</span></a>
-                <small>{{leader.points}} Points</small>
-            </li>
-        </ul>
-    </div>
-    <nav class="navbar navbar-default univibe-custom-nav navbar-fixed-top" role="navigation">
+    <fixed-nav></fixed-nav>
+    <nav class="navbar navbar-default univibe-custom-nav custom-fixed" role="navigation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-1">
-                    <div class="product-image" ui-sref="base.feed"></div>
-                </div>
                 <div class="hidden-xs col-md-3">
                     <div class="input-group search">
                         <span class="input-group-addon" id="basic-addon1">
@@ -38,16 +11,13 @@
                         <input type="search" id="search" class="form-control" placeholder="Search" required="required" ng-model="searchText">
                     </div>
                 </div>
-                <div class="hidden-xs col-md-4">
+                <div class="hidden-xs col-md-5">
                     <ul class="list-inline">
                         <li>
-                            <a href="#">Network</a>
+                            <a ui-sref="base.feed">Home</a>
                         </li>
                         <li>
-                            <a href="#">Mentorship</a>
-                        </li>
-                        <li>
-                            <a href="#" ui-sref="base.feed">Feed</a>
+                            <a ui-sref="base.list">Network</a>
                         </li>
                         <li>
                             <a href="#">Groups</a>
@@ -62,7 +32,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="btn btn-transparent">
+                            <a class="btn btn-transparent" ui-sref="inbox">
                                 <span class="univibe-notification-count">200</span>
                                 <i class="material-icons">inbox</i>
                             </a>
@@ -75,8 +45,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-7 visible-xs">
-                    <ul class="list-inline icon-list" ng-controller="BaseCtrl">
+                <div class="col-xs-8 visible-xs">
+                    <ul class="list-inline icon-list">
                         <li>
                             <a class="btn btn-transparent" ng-click="openNav()">
                                 <i class="material-icons">menu</i>
@@ -94,7 +64,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="btn btn-transparent">
+                            <a class="btn btn-transparent" ui-sref="base.notificationsList">
                                 <span class="univibe-notification-count">1</span>
                                 <i class="fa fa-globe"></i>
                             </a>
@@ -106,7 +76,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-xs-5 text-right">
+                <div class="col-md-2 col-xs-4 text-right">
                     <div class="univibe-profile-picture-frame pull-right">
                         <img src="https://robohash.org/ankitporwal.jpg?size=40x40&set=set1" alt="profile-picture" ui-sref="base.profile"> <span class="hidden-xs">Ankit</span>
                         <a href="#"><i class="material-icons pull-right">more_vert</i></a>

@@ -43,5 +43,4 @@ angular.module('feed').config(function($stateProvider) {
         controller: 'ExclusiveListCtrl'
     });
     /* Add New States Above */
-
 });

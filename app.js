@@ -32,5 +32,4 @@ angular.module('univibe').run(function($rootScope) {
             this.$apply(fn);
         }
     };
-
 });
