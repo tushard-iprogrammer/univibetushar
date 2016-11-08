@@ -1,5 +1,5 @@
 <div>
-    <div class="panel panel-default abbas-post-template">
+    <div class="panel panel-default univibe-post-template">
         <div class="panel-body exclusive-body" ng-show="post.type === 'exclusive'" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+post.cover+')'}" ng-click="goto(post.type, post.subtype)">
             <button type="button" class="btn btn-outline pull-right" ng-click="goto(post.type, post.subtype)">View</button>
             <h3 class="text-capitalize"><small>{{post.posted_time | amCalendar:referenceTime:formats}}</small><br>{{post.title}}</h3>
@@ -19,7 +19,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="media abbas-profile-details">
+            <div class="media univibe-profile-details">
                 <div class="media-left media-middle">
                     <a href="#">
                         <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="list-group">
-            <div class="list-group-item abbas-like-bar" ng-show="post.comments.length || post.likes">
+            <div class="list-group-item univibe-like-bar" ng-show="post.comments.length || post.likes">
                 <ul class="list-inline">
                     <li>
                         <a href="#" class="btn btn-transparent"><i class="material-icons">favorite_border</i></a> {{post.likes}}

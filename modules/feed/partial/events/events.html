@@ -1,5 +1,5 @@
 <div class="col-md-12 main-panel">
-    <div class="jumbotron abbas-jumbotron" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+post.cover+')'}">
+    <div class="jumbotron univibe-jumbotron" ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75)), url('+post.cover+')'}">
         <div class="container-fluid">
             <div class="btn-group pull-right">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -15,7 +15,7 @@
             <h2>Hello, world!<br><small>Whatever subtitle line is here</small></h2>
         </div>
     </div>
-    <div class="panel panel-default abbas-post-detail">
+    <div class="panel panel-default univibe-post-detail">
         <div class="panel-heading">
             <ul class="list-inline pull-right">
                 <li><a class="btn btn-transparent btn-xs" ng-click="openModal('view')"><i class="material-icons">mail_outline</i> 32 People Attending</a></li>
@@ -26,7 +26,7 @@
             <ul class="list-inline pull-right">
                 <li><a class="btn btn-default btn-sm"><i class="material-icons">file_download</i> Download Attendees</a></li>
             </ul>
-            <div class="media abbas-profile-details">
+            <div class="media univibe-profile-details">
                 <div class="media-left media-top">
                     <a href="#">
                         <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="list-group">
-            <div class="list-group-item abbas-like-bar" ng-show="post.comments.length || post.likes">
+            <div class="list-group-item univibe-like-bar" ng-show="post.comments.length || post.likes">
                 <ul class="list-inline">
                     <li>
                         <a href="#" class="btn btn-transparent"><i class="material-icons">favorite_border</i></a> {{post.likes}}

@@ -1,5 +1,5 @@
-<div class="abbas-wrapper">
-    <div class="abbas-sidebar-wrapper">
+<div class="main-wrapper">
+    <div class="univibe-sidebar-wrapper">
         <ul class="navlinks" ng-show="!leaderboard">
             <li>
                 <a><i class="material-icons">info_outline</i> About Us</a>
@@ -128,7 +128,7 @@
                     <hr ng-hide="hide">
                     <div class="row row-horizon" ng-hide="hide">
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="user in userList">
-                            <div class="media abbas-profile-details">
+                            <div class="media univibe-profile-details">
                                 <div class="media-left media-top">
                                     <a href="#">
                                         <img class="media-object" ng-src="{{user.profile_picture}}" alt="user.id">
@@ -148,7 +148,7 @@
                     <hr ng-hide="hide">
                     <div class="panel panel-default chat-panel" ng-style="{'height':hide ? '550px' : '400px'}">
                         <div class="panel-heading">
-                            <div class="media abbas-profile-details">
+                            <div class="media univibe-profile-details">
                                 <div class="media-left media-top">
                                     <a href="#">
                                         <img class="media-object" ng-src="{{userList[0].profile_picture}}" alt="userList[0].id">

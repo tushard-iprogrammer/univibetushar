@@ -13,7 +13,7 @@ angular.module('feed').controller('PreviewmodalCtrl', function($scope, image, im
 
         var padding = modalHeight - imageHeight;
 
-        $('.abbas-preview-image-container').css('padding-top', Math.floor(padding/2)).css('padding-bottom', Math.floor(padding/2));
+        $('.univibe-preview-image-container').css('padding-top', Math.floor(padding/2)).css('padding-bottom', Math.floor(padding/2));
 
         console.log(padding);
     };
