@@ -36,7 +36,7 @@ angular.module('feed').controller('StatusUpdateCtrl', function($scope, $window, 
         	size:'lg',
             templateUrl: 'modules/feed/partial/previewModal/previewModal.html',
             controller: 'PreviewmodalCtrl',
-            windowClass:'animated fadeIn abbas-preview-modal',
+            windowClass:'animated fadeIn univibe-preview-modal',
             resolve:{
             	image: function(){
             		return image;

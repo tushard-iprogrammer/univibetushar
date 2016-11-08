@@ -34,7 +34,7 @@ angular.module('feed').directive('post', function($state, $uibModal) {
                     size: 'lg',
                     templateUrl: 'modules/feed/partial/previewModal/previewModal.html',
                     controller: 'PreviewmodalCtrl',
-                    windowClass: 'animated fadeIn abbas-preview-modal',
+                    windowClass: 'animated fadeIn univibe-preview-modal',
                     resolve: {
                         image: function() {
                             return image;

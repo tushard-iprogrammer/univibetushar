@@ -356,11 +356,11 @@
     margin-left: 0;
   }
 }
-.abbas-content-wrapper {
+.univibe-content-wrapper {
   padding-top: 0px;
   width: 100%;
 }
-.abbas-custom-nav {
+.univibe-custom-nav {
   background-color: #db4437;
   color: #fff;
   border: none;
@@ -369,25 +369,25 @@
   margin-bottom: 0;
   max-height: 57px;
 }
-.abbas-custom-nav .container-fluid .row {
+.univibe-custom-nav .container-fluid .row {
   padding-top: 10px;
 }
-.abbas-custom-nav .container-fluid .row .list-inline {
+.univibe-custom-nav .container-fluid .row .list-inline {
   height: 36px;
   margin-bottom: 0;
 }
-.abbas-custom-nav .container-fluid .row .list-inline li {
+.univibe-custom-nav .container-fluid .row .list-inline li {
   height: 48px;
   padding-top: 6px;
   width: auto;
 }
-.abbas-custom-nav .container-fluid .row .list-inline li a {
+.univibe-custom-nav .container-fluid .row .list-inline li a {
   height: inherit;
   width: inherit;
   color: inherit;
   font-weight: 500;
 }
-.abbas-custom-nav .container-fluid .row .list-inline li a span.abbas-notification-count {
+.univibe-custom-nav .container-fluid .row .list-inline li a span.univibe-notification-count {
   background-color: #000000;
   border: 1px solid #444444;
   width: auto;
@@ -401,26 +401,26 @@
   font-size: 9px;
   margin-left: 12px;
 }
-.abbas-custom-nav .container-fluid .row .list-inline.icon-list li {
+.univibe-custom-nav .container-fluid .row .list-inline.icon-list li {
   max-width: 36px;
   width: auto;
   margin-top: -8px;
 }
-.abbas-custom-nav .container-fluid .row .list-inline.icon-list li i {
+.univibe-custom-nav .container-fluid .row .list-inline.icon-list li i {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .abbas-custom-nav .container-fluid .row .list-inline.icon-list {
+  .univibe-custom-nav .container-fluid .row .list-inline.icon-list {
     border-left: 1px solid #e36c62;
   }
 }
-.abbas-custom-nav .form-control {
+.univibe-custom-nav .form-control {
   height: 36px;
 }
-.abbas-custom-nav i {
+.univibe-custom-nav i {
   font-size: 24px;
 }
-.abbas-custom-nav button {
+.univibe-custom-nav button {
   width: 24px;
 }
 div.product-image {
@@ -479,12 +479,12 @@ div.minilogo h1.brand-name {
   vertical-align: middle;
   margin-top: -48px;
 }
-.abbas-profile-picture-frame {
+.univibe-profile-picture-frame {
   width: auto;
   height: 48px;
   display: inline-block;
 }
-.abbas-profile-picture-frame img {
+.univibe-profile-picture-frame img {
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -493,16 +493,16 @@ div.minilogo h1.brand-name {
   margin-top: -2px;
   margin-right: 4px;
 }
-.abbas-profile-picture-frame i {
+.univibe-profile-picture-frame i {
   padding-top: 6px;
   padding-left: 6px;
   height: 46px;
   cursor: pointer;
   color: #fff;
 }
-.abbas-profile-picture-frame i:hover,
-.abbas-profile-picture-frame i:focus,
-.abbas-profile-picture-frame i.focus {
+.univibe-profile-picture-frame i:hover,
+.univibe-profile-picture-frame i:focus,
+.univibe-profile-picture-frame i.focus {
   color: initial;
 }
 .search .input-group-addon {
@@ -525,7 +525,7 @@ div.minilogo h1.brand-name {
   border-color: transparent;
   background: #f5f5f5;
 }
-.abbas-custom-sub-nav {
+.univibe-custom-sub-nav {
   background: white;
   border-radius: 0;
   box-shadow: none;
@@ -572,44 +572,44 @@ ul.nav-tabs li a.active {
   border-bottom: 2px solid #e36c62;
 }
 /*** Right sidebar ***/
-.abbas-list-group h5 {
+.univibe-list-group h5 {
   display: inline-block;
   margin-left: 8px;
 }
-.abbas-list-group i {
+.univibe-list-group i {
   font-size: 18px;
 }
-.abbas-list-group a {
+.univibe-list-group a {
   color: #db4437;
 }
-.abbas-list-group a:hover,
-.abbas-list-group a:focus,
-.abbas-list-group a.active {
+.univibe-list-group a:hover,
+.univibe-list-group a:focus,
+.univibe-list-group a.active {
   color: #e36c62;
 }
-.abbas-list-group .media {
+.univibe-list-group .media {
   padding: 8px 0 8px;
   margin-bottom: 8px;
   border-bottom: 1px solid #eeeeee;
 }
-.abbas-list-group .media:first-child {
+.univibe-list-group .media:first-child {
   margin-top: 8px;
 }
-.abbas-list-group .media h5 {
+.univibe-list-group .media h5 {
   display: block;
   width: 300px;
   text-overflow: ellipsis;
   margin: 0;
 }
-.abbas-list-group .media .media-object {
+.univibe-list-group .media .media-object {
   border-radius: 50%;
   border: 1px solid #D4D4D4;
 }
-.abbas-list-group .media:last-child {
+.univibe-list-group .media:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
-.abbas-list-group .abbas-opportunity-heading {
+.univibe-list-group .univibe-opportunity-heading {
   margin: 16px 0 auto;
 }
 .btn-group.scroller button.btn-xs i {
@@ -940,7 +940,7 @@ textarea.comment-textarea {
   height: 100%;
   background: black;
 }
-.abbas-preview-modal {
+.univibe-preview-modal {
   overflow-y: scroll;
 }
 .univibe-skill-list {
