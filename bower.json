@@ -34,7 +34,8 @@
     "ng-photo-grid": "^0.0.1",
     "jquery-watch-dom": "^1.21.0",
     "ng-material-floating-button": "ng-mfb#^0.6.2",
-    "parallax.js": "^1.4.2"
+    "parallax.js": "^1.4.2",
+    "angular-strap": "^2.3.10"
   },
   "resolutions": {
     "jquery": "~2.2",
